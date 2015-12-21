@@ -1,0 +1,31 @@
+<div ng-include="'menu.html'"></div>
+<div class="loginbody_container">
+    <h1 class="oma_h1">Yhteystiedot</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th ng-click="order('Nimi')">Nimi <span class="sortorder" ng-class="{reverse:reverse}"></span></th>
+                <th ng-click="order('Osoite')">Osoite <span class="sortorder" ng-class="{reverse:reverse}"></span></th>
+                <th ng-click="order('Kategoria')">Kategoria <span class="sortorder" ng-class="{reverse:reverse}"></span></th>
+                <th ng-click="order('Puhelin')">Puhelin <span class="sortorder" ng-class="{reverse:reverse}"></span></th>
+                <th ng-click="order('Sahkoposti')">Sähköposti <span class="sortorder" ng-class="{reverse:reverse}"></span></th>
+                <th ng-click="order('Internet')">Internet <span class="sortorder" ng-class="{reverse:reverse}"></span></th>
+                <th>Muokkaa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in collectionData | orderBy:'Nimi' | orderBy:predicate:reverse">
+                <td>{{person.Nimi}}</td>
+                <td>{{person.Osoite}}</td>
+                <td>{{person.Kategoria}}</td>
+                <td>{{person.Puhelin}}</td>
+                <td><input type="button" class='btn btn-primary' value='{{person.Sahkoposti}}' ng-click ='emailClicked(person.Sahkoposti)'></td>
+                <td><input type="button" class='btn btn-primary' value='{{person.Internet}}' ng-click ='wwwClicked(person.Internet)'></td>
+                <td><input type="button" class="btn btn-primary" value="Muokkaa" ng-click='modify(person._id)'/></td>
+            </tr>
+        </tbody>
+    </table>
+    <form id="email_form" method="post"></form>  
+    <input class='btn btn-primary' value="Lisää Yhteystieto" ng-click='add()'>
+    <div class="flash-style" flash-message="2000"></div>
+</div>

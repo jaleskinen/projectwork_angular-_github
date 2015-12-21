@@ -1,0 +1,29 @@
+<div ng-include="'menu.html'"></div>
+<div class="omaentry">  
+    <h1 class="oma_h1">Lisää Työtunteja</h1>
+    <form>
+        <h4 class="oma_h4">Päivä:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Aika" ng-model ="Paiva"/>
+        <h4 class="oma_h4">Ilmoittaja:</h4>
+        <select required class="form-control center-block" style = "width:300px; padding-left: 110px" ng-model ="Ilmoittaja">
+            <option value="" disabled selected>Ilmoittaja</option>
+            <option ng-repeat="person in document" >
+               {{person}}
+            </option>
+        </select>
+        <h4 class="oma_h4">Tehtävä:</h4>
+        <select required name="Tehtävä" class="form-control center-block" style = "width:300px; padding-left: 110px" ng-model ="Tehtava">
+            <option value="" disabled selected>Tehtävä</option>
+            <option value="Asiakas">Asiakas</option>
+            <option value="Toimisto">Toimisto</option>
+            <option value="Talli">Talli</option>
+            <option value="Muut työt">Muut työt</option>
+        </select>
+        <!--<input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Tehtävä" ng-model ="Tehtava"/>-->
+        <h4 class="oma_h4">Tunnit:</h4>
+        <input type="number"  min="0"  step="0.5" class="form-control text-center center-block" style = "width:300px" placeholder="Tunnit" ng-model ="Tunnit"/>
+        <div class="flash-style" flash-message="2000"></div>
+        <input type="submit" class='btn btn-primary' value="Lisää" ng-click="addNew()"/>
+        <input Type="submit" class='btn btn-primary' value="Palaa" ng-click='backClicked()'><br><br>
+    </form>
+</div>

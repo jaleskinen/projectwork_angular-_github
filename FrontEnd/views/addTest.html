@@ -1,0 +1,17 @@
+<div ng-include="'menu.html'"></div>
+
+<div class="omaentry">  
+    <h1 class="oma_h1">Lisää Testejä</h1>
+        
+    <form>
+        <h4 class="oma_h4">Test1:</h4>
+        <input type="text" required  class="form-control text-center center-block" style = "width:350px" placeholder="Test1" ng-model ="Test1"/>
+        <h4 class="oma_h4">Test2:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:350px" placeholder="Test2" ng-model ="Test2"/>
+        <h4 class="oma_h4">Test3:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:350px" placeholder="Test3" ng-model ="Test3"/>
+        <input type="submit" class='btn btn-primary' value="Lisää" ng-click="addNew()"/>
+        <input Type="submit" class='btn btn-primary' value="Palaa" ng-click='backClicked()'>
+        <div class="flash-style" flash-message="2000"></div><br><br>
+    </form>
+</div>

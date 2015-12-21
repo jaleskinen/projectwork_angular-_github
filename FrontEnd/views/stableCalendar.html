@@ -1,0 +1,34 @@
+<div ng-include="'menu.html'"></div>
+<div class="loginbody_container">
+    <h1 class="oma_h1">Tallin Tuntikalenteri</h1>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Kellonaika</th>
+            <th>Maanantai</th>
+            <th>Tiistai</th>
+            <th>Keskiviikko</th>
+            <th>Torstai</th>
+            <th>Perjantai</th>
+            <th>Lauantai</th>
+            <th>Sunnuntai</th>
+            <th>Muokkaa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="hours in collectionData | orderBy:'Kellonaika'">
+            <td>{{hours.Kellonaika}}</td>
+            <td>{{hours.Maanantai}}</td>
+            <td>{{hours.Tiistai}}</td>
+            <td>{{hours.Keskiviikko}}</td>
+            <td>{{hours.Torstai}}</td>
+            <td>{{hours.Perjantai}}</td>
+            <td>{{hours.Lauantai}}</td>
+            <td>{{hours.Sunnuntai}}</td>
+            <td><input type="button" class="btn btn-primary" value="Muokkaa" ng-click='modify(hours._id)'/></td>
+          </tr>
+        </tbody>
+    </table>
+    <input class='btn btn-primary' value="Lisää Tunteja" ng-click='add()'>
+    <div class="flash-style" flash-message="2000"></div> 
+</div>

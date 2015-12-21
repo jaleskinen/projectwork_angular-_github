@@ -1,0 +1,24 @@
+<div ng-include="'menu.html'"></div>
+<div class="loginbody_container">
+    <h1 class="oma_h1"> !!! Demo page for testing purposes !!! </h1>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+             <th ng-click="order('Test1')">Test1 <span class="sortorder" ng-show="predicate === 'Test1'" ng-class="{reverse:reverse}"></span></th>
+             <th ng-click="order('Test2')">Test2 <span class="sortorder" ng-show="predicate === 'Test2'" ng-class="{reverse:reverse}"></span></th>
+             <th ng-click="order('Test3')">Test3 <span class="sortorder" ng-show="predicate === 'Test3'" ng-class="{reverse:reverse}"></span></th>
+             <th>Muokkaa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="test in collectionData | orderBy:'Test1' | orderBy:predicate:reverse">
+            <td>{{test.Test1}}</td>
+            <td>{{test.Test2}}</td>
+            <td>{{test.Test3}}</td>
+            <td><input type="button" class="btn btn-primary" value="Muokkaa" ng-click='modify(test._id)'/></td>
+          </tr>
+        </tbody>
+    </table>
+    <input class='btn btn-primary' value="Lisää Testi" ng-click='add()'>
+    <div class="flash-style" flash-message="2000"></div>
+</div>

@@ -1,0 +1,31 @@
+<div ng-include="'menu.html'"></div>
+
+<div class="loginbody_container">
+    <h1 class="oma_h1">Hevosten Ruokinta</h1>
+
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th ng-click="order('Hevonen')">Hevonen  <span class="sortorder" ng-class="{reverse:reverse}"></span></th>
+            <th>Aamuruoka</th>
+            <th>Päiväruoka</th>
+            <th>Iltaruoka</th>
+            <th>Huomio</th>
+            <th>Muokkaa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="horse in collectionData | orderBy:'Hevonen' | orderBy:predicate:reverse">
+            <td>{{horse.Hevonen}}</td>
+            <td>{{horse.Aamuruoka}}</td>
+            <td>{{horse.Paivaruoka}}</td>
+            <td>{{horse.Iltaruoka}}</td>
+            <td>{{horse.Huomio}}</td>
+            <td><input type="button" class="btn btn-primary" value="Muokkaa" ng-click='modify(horse._id)'/></td>
+          </tr>
+        </tbody>
+    </table>
+    <input class='btn btn-primary' value="Lisää Ruokinta" ng-click='add()'>
+    <div class="flash-style" flash-message="2000"></div> 
+</div>
+  

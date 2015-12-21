@@ -1,0 +1,13 @@
+<div ng-include="'menu.html'"></div>
+<div class="loginbody_container">
+    <h2>Muokkaa/Poista Testejä</h2>
+    <h4>Test1</h4>
+    <input type='text' class="form-control text-left" style = "width:350px" ng-model= "Test1"/>
+    <h4>Test2</h4>
+    <input type='text' class="form-control text-left" style = "width:350px" ng-model= "Test2"/>
+    <h4>Test3</h4>
+    <input type='text' class="form-control text-left" style = "width:350px" ng-model= "Test3"/>
+    <input type='button' class='btn btn-primary' value='Päivitä' ng-click='update()'/>
+    <input type='button' class='btn btn-primary' value='Poista' ng-click='delete()'/>
+    <a href="#/test" class="btn btn-primary">Palaa</a>
+</div>

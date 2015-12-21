@@ -1,0 +1,17 @@
+<div ng-include="'menu.html'"></div>
+<div class="loginbody_container">
+    <h2>Muokkaa/Poista Ilmoituksia</h2>
+    <h4>Aika</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Aika"/>
+    <h4>Ilmoittaja</h4>
+        <select required class="form-control center-block" style = "width:250px; padding-left: 80px" ng-model ="Ilmoittaja">
+            <option ng-repeat="person in document" >
+               {{person}}
+            </option>
+        </select>
+    <h4>Ilmoitus</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Ilmoitus"/>
+    <input type='button' class='btn btn-primary' value='Päivitä' ng-click='update(person._id)'/>
+    <input type='button' class='btn btn-primary' value='Poista' ng-click='delete()'/>
+    <a href="#/todo" class="btn btn-primary">Palaa</a>
+</div>

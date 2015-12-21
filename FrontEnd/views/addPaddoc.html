@@ -1,0 +1,24 @@
+<div ng-include="'menu.html'"></div>
+<div class="omaentry">  
+    <h1 class="oma_h1">Lisää Tarhaus</h1>
+    <form>
+        <h4 class="oma_h4">Hevonen:</h4>
+        <select required class="form-control center-block" style = "width:300px; padding-left: 110px" ng-model ="Hevonen">
+            <option value="" disabled selected>Hevonen</option>
+            <option ng-repeat="horse in document" >
+               {{horse}}
+            </option>
+        </select>
+        <h4 class="oma_h4">Aamutarha:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Aamutarha" ng-model ="Aamutarha"/>
+        <h4 class="oma_h4">Päivätarha:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Päivätarha" ng-model ="Paivatarha"/>
+        <h4 class="oma_h4">Iltatarha:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Iltatarha" ng-model ="Iltatarha"/>
+        <h4 class="oma_h4">Huomio:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Huomio" ng-model ="Huomio"/>
+        <div class="flash-style" flash-message="2000"></div>
+        <input type="submit" class='btn btn-primary' value="Lisää" ng-click="addNew()"/>
+        <input Type="submit" class='btn btn-primary' value="Palaa" ng-click='backClicked()'><br><br>
+    </form>
+</div>

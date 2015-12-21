@@ -1,0 +1,33 @@
+<div ng-include="'menu.html'"></div>
+
+<div class="omaentry">  
+    <h1 class="oma_h1">Lisää Tunteja</h1>
+        
+    <form>
+        <h4 class="oma_h4">Aika:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Aika" ng-model ="Aika"/>
+        <h4 class="oma_h4">Hevonen:</h4>
+        <select required class="form-control center-block" style = "width:300px; padding-left: 110px" ng-model ="Hevonen">
+            <option value="" disabled selected>Hevonen</option>
+            <option ng-repeat="horse in document" >
+               {{horse}}
+            </option>
+        </select>
+        <h4 class="oma_h4">Laji:</h4>
+        <select required name="Laji" class='form-control center-block center-value' style = 'width:300px;padding-left: 115px' ng-model ="Laji">
+            <option value="" disabled selected>Laji</option>
+            <option value="Koulu">Koulu</option>
+            <option value="Este">Este</option>
+            <option value="Puomi">Puomi</option>
+            <option value="Maasto">Maasto</option>
+            <option value="Talutus">Talutus</option>
+            <option value="Yleistunti">Yleistunti</option>
+        </select>
+        <!--<input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Laji" ng-model ="Laji"/>-->
+        <h4 class="oma_h4">Tunnit:</h4>
+        <input type="number"  min="0"  step="0.5"  class="form-control text-center center-block" style = "width:300px" placeholder="Tunnit" ng-model ="Tunnit"/>
+        <div class="flash-style" flash-message="2000"></div>
+        <input type="submit" class='btn btn-primary' value="Lisää" ng-click="addNew()"/>
+        <input Type="submit" class='btn btn-primary' value="Palaa" ng-click='backClicked()'><br><br>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<div ng-include="'menu.html'"></div>
+<div class="loginbody_container">
+    <h2>Muokkaa/Poista Hevosten Tarhaustietoja</h2>
+    <h4 class="oma_h4">Hevonen</h4>
+        <select required class="form-control center-block" style = "width:250px; padding-left: 90px" ng-model ="Hevonen">
+            <option ng-repeat="horse in document" >
+               {{horse}}
+            </option>
+        </select>
+    <!--<h4>Hevonen</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Hevonen"/>-->
+    <h4>Aamutarha</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Aamutarha"/>
+    <h4>Päivätarha</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Paivatarha"/>
+    <h4>Iltatarha</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Iltatarha"/>
+    <h4>Huomio</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Huomio"/>
+    <input type='button' class='btn btn-primary' value='Päivitä' ng-click='update(horse._id)'/>
+    <input type='button' class='btn btn-primary' value='Poista' ng-click='delete()'/>
+    <a href="#/paddoc" class="btn btn-primary">Palaa</a>
+</div>

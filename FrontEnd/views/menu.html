@@ -1,0 +1,53 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid"> <!--Or use container-fluid -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand navbar-brand-oma" href="#/main" ng-click='menuPath()'>Pehtoori</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Hevoset
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/horse" ng-click='menuPath()'>Esittely</a></li>
+            <li><a href="#/feedHorse" ng-click='menuPath()'>Ruokinta</a></li>
+            <li><a href="#/paddoc" ng-click='menuPath()'>Tarhaus</a></li>
+            <li><a href="#/horseHour" ng-click='menuPath()'>Työtunnit</a></li>
+            <li><a href="#/healthHorse" ng-click='menuPath()'>Terveys</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" >Henkilöt
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/person" ng-click='menuPath()'>Yhteystiedot</a></li>
+            <li><a href="#/personHour" ng-click='menuPath()'>Työtunnit</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" >Talli
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/todo" ng-click='menuPath()'>Ilmoitukset</a></li>
+            <li><a href="#/stableCalendar" ng-click='menuPath()'>Tuntikalenteri</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" >Testi
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/test" ng-click='menuPath()'>Demo</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

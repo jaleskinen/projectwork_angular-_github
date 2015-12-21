@@ -1,0 +1,15 @@
+<div ng-include="'menu.html'"></div>
+<div class="loginbody_container">
+    <h2>Muokkaa/Poista Hevosen Tietoja</h2>
+    <h4>Nimi</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Nimi"/>
+    <h4>Kutsumanimi</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Kutsumanimi"/>
+    <h4>Syntymäaika</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Syntymaaika"/>
+    <h4>Sukuposti</h4>
+    <input type='text' class="form-control text-left" style = "width:450px" ng-model= "Sukuposti"/><br>
+    <input type='button' class='btn btn-primary' value='Päivitä' ng-click='update()'/>
+    <input type='button' class='btn btn-primary' value='Poista' ng-click='delete()'/>
+    <a href="#/horse" class="btn btn-primary">Palaa</a>
+</div>

@@ -1,0 +1,23 @@
+<div ng-include="'menu.html'"></div>
+
+<div class="omaentry">  
+    <h1 class="oma_h1">Lisää Ilmoitus</h1>
+        
+    <form>
+        <h4 class="oma_h4">Aika:</h4>
+        <input type="text" id= "dateDefault" class="form-control text-center center-block" style = "width:300px" placeholder="Aika" ng-model ="Aika"/>
+        <h4 class="oma_h4">Ilmoittaja:</h4>
+        <select required class="form-control center-block" style = "width:300px; padding-left: 100px" value="Ilmoittaja" ng-model ="Ilmoittaja">
+            <option value="" disabled selected>Ilmoittaja</option>
+            <option ng-repeat="person in document" >
+               {{person}}
+            </option>
+        </select>
+        <h4 class="oma_h4">Ilmoitus:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Ilmoitus" ng-model ="Ilmoitus"/>
+    
+        <input type="submit" class='btn btn-primary' value="Lisää" ng-click="addNew()"/>
+        <input Type="submit" class='btn btn-primary' value="Palaa" ng-click='backClicked()'><br><br>
+
+    </form>
+</div>

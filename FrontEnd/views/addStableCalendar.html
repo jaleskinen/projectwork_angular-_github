@@ -1,0 +1,27 @@
+<div ng-include="'menu.html'"></div>
+
+<div class="omaentry">  
+    <h1 class="oma_h1">Lisää Tunteja</h1>
+        
+    <form>
+        <h4 class="oma_h4">Kellonaika:</h4>
+        <input type="text" required  class="form-control text-center center-block" style = "width:300px" placeholder="Kellonaika" ng-model ="Kellonaika"/>
+        <h4 class="oma_h4">Maanantai:</h4>
+        <input type="text" class="form-control text-center center-block" style = "width:300px" placeholder="Maanantai" ng-model ="Maanantai"/>
+        <h4 class="oma_h4">Tiistai:</h4>
+        <input type="text" class="form-control text-center center-block" style = "width:300px" placeholder="Tiistai" ng-model ="Tiistai"/>
+        <h4 class="oma_h4">Keskiviikko:</h4>
+        <input type="text" class="form-control text-center center-block" style = "width:300px" placeholder="Keskiviikko" ng-model ="Keskiviikko"/>
+        <h4 class="oma_h4">Torstai:</h4>
+        <input type="text" class="form-control text-center center-block" style = "width:300px" placeholder="Torstai" ng-model ="Torstai"/>
+        <h4 class="oma_h4">Perjantai:</h4>
+        <input type="text" class="form-control text-center center-block" style = "width:300px" placeholder="Perjantai" ng-model ="Perjantai"/>
+        <h4 class="oma_h4">Lauantai:</h4>
+        <input type="text" class="form-control text-center center-block" style = "width:300px" placeholder="Lauantai" ng-model ="Lauantai"/>
+        <h4 class="oma_h4">Sunnuntai:</h4>
+        <input type="text" class="form-control text-center center-block" style = "width:300px" placeholder="Sunnuntai" ng-model ="Sunnuntai"/>
+        <input type="submit" class='btn btn-primary' value="Lisää" ng-click="addNew()"/>
+        <input Type="submit" class='btn btn-primary' value="Palaa" ng-click='backClicked()'>
+        <div class="flash-style" flash-message="2000"></div><br><br>
+    </form>
+</div>

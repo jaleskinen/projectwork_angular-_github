@@ -1,0 +1,18 @@
+<div class="loginbody_container">
+    <h2 class="oma_h2">Pehtoori</h2>
+    <h3 class="oma_h3" align="left">Pehtoori on hevostallin työntekijöille ja omistajille suunnattu sivusto, jonka tarkoitus on helpottaa tallin päivittäisten rutiinien hoitamista.
+        Pehtoorin avulla voit helposti pitää kirjaa ja suunnitella tallin, työntekijöiden sekä hevosten päivittäiseen toimintaan liittyviä asioita. 
+        Pehtoori on selainpohjainen ohjelmisto jonka käyttö onnistuu useimmilla päätelaittella, joilla on mahdollista saada yhteys internettiin.
+    </h3>
+<!--        </div>
+<div class="omaentry">-->
+    <h3 class="h3_bold">Kirjaudu Pehtooriin</h3> 
+    <form>
+        <!--ng-model directive is the way to tarnsfer data to controller -->
+        <input type="text" placeholder="username" class="form-control" style = "width:300px" ng-model="user">
+        <input type="password" placeholder="password" class="form-control" style = "width:300px" ng-model='pass'>
+        <input type="button" value="Login" class="btn btn-primary" ng-click='loginClicked()'>
+        <input type="button" value="Register" class="btn btn-primary" ng-click='registerClicked()' >
+    </form><br>  
+    <div class="flash-style" flash-message="3000"></div>
+</div>

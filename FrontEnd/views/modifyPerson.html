@@ -1,0 +1,19 @@
+<div ng-include="'menu.html'"></div>
+<div class="loginbody_container">
+    <h2>Muokkaa/Poista Yhteyshekilöiden Tietoja</h2>
+    <h4>Nimi</h4>
+    <input type='text' class="form-control text-left" style = "width:350px" ng-model= "Nimi"/>
+    <h4>Osoite</h4>
+    <input type='text' class="form-control text-left" style = "width:350px" ng-model= "Osoite"/>
+    <h4>Puhelinnumero</h4>
+    <input type='text' class="form-control text-left" style = "width:350px" ng-model= "Puhelin"/>
+    <h4>Kategoria</h4>
+    <input type='text' class="form-control text-left" style = "width:350px" ng-model= "Kategoria"/>
+    <h4>Sahkoposti</h4>
+    <input type='text' class="form-control text-left" style = "width:350px" ng-model= "Sahkoposti"/>
+    <h4>Internet</h4>
+    <input type='text' class="form-control text-left" style = "width:350px" ng-model= "Internet"/><br>
+    <input type='button' class='btn btn-primary' value='Päivitä' ng-click='update()'/>
+    <input type='button' class='btn btn-primary' value='Poista' ng-click='delete()'/>
+    <a href="#/person" class="btn btn-primary">Palaa</a>
+</div>

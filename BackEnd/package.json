@@ -1,0 +1,26 @@
+{
+  "name": "projectwork_angular",
+  "version": "0.0.1",
+  "description": "RESTful server for Pehtoori app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jaleskinen@bitbucket.org/jaleskinen/projectwork_angular.git"
+  },
+  "author": "Jarmo Leskinen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://jaleskinen@bitbucket.org/jaleskinen/projectwork_angular"
+  },
+  "homepage": "https://bitbucket.org/jaleskinen/projectwork_angular",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "mongoose": "^4.2.3",
+    "uuid": "^2.0.1"
+  }
+}

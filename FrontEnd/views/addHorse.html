@@ -1,0 +1,20 @@
+<div ng-include="'menu.html'"></div>
+
+<div class="omaentry">
+
+    <h1 class="oma_h1">Lisää hevonen</h1>
+    <form>        
+        <h4 class="oma_h4">Nimi:</h4>
+        <input type="text" required  class="form-control text-center center-block" style = "width:300px" placeholder="Koko nimi" ng-model ="Nimi"/>
+        <h4 class="oma_h4">Kutsumanimi:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Kutsumanimi" ng-model ="Kutsumanimi" />
+        <h4 class="oma_h4">Syntymäaika:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Syntymäaika" ng-model ="Syntymaaika" />
+        <h4 class="oma_h4">Sukuposti:</h4>
+        <a class="btn btn-primary btn-sm" href="http://www.sukuposti.net/hevonen/hae" role="button" target="_blank">Hae Linkki</a>
+        <input type="text"  class="form-control text-center center-block" style = "width:300px" placeholder="Linkki" ng-model ="Sukuposti" /><br><br>
+        <input id="add" type="button" class='btn btn-primary' value="Lisää" ng-click="addNew()"/>
+        <input type="button" class="btn btn-primary" value="Palaa" ng-click='backClicked()'/>
+    </form>
+    <div class="flash-style" flash-message="2000"></div>
+</div>

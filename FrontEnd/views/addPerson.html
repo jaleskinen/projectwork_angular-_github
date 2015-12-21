@@ -1,0 +1,23 @@
+<div ng-include="'menu.html'"></div>
+
+<div class="omaentry">  
+    <h1 class="oma_h1">Lisää Yhteystietoja</h1>
+        
+    <form>
+        <h4 class="oma_h4">Nimi:</h4>
+        <input type="text" required  class="form-control text-center center-block" style = "width:350px" placeholder="Nimi" ng-model ="Nimi"/>
+        <h4 class="oma_h4">Osoite:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:350px" placeholder="Osoite" ng-model ="Osoite"/>
+        <h4 class="oma_h4">Puhelin:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:350px" placeholder="Puhelinnumero" ng-model ="Puhelin"/>
+        <h4 class="oma_h4">Kategoria:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:350px" placeholder="Kategoria" ng-model ="Kategoria"/>
+        <h4 class="oma_h4">Sähköposti:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:350px" placeholder="Sahkoposti" ng-model ="Sahkoposti"/>
+        <h4 class="oma_h4">Internet:</h4>
+        <input type="text"  class="form-control text-center center-block" style = "width:350px" placeholder="Internet" ng-model ="Internet"/>
+        <input type="submit" class='btn btn-primary' value="Lisää" ng-click="addNew()"/>
+        <input Type="submit" class='btn btn-primary' value="Palaa" ng-click='backClicked()'>
+        <div class="flash-style" flash-message="2000"></div><br><br>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<div ng-include="'menu.html'"></div>
+<div class="loginbody_container">
+    <h2>Muokkaa/Poista Tuntikalenterin Tunteja</h2>
+    <h4>Kellonaika</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Kellonaika"/>
+    <h4>Maanantai</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Maanantai"/>
+    <h4>Tiistai</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Tiistai"/>
+    <h4>Keskiviikko</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Keskiviikko"/>
+    <h4>Torstai</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Torstai"/>
+    <h4>Perjantai</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Perjantai"/>
+    <h4>Lauantai</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Lauantai"/>
+    <h4>Sunnuntai</h4>
+    <input type='text' class="form-control text-left" style = "width:250px" ng-model= "Sunnuntai"/>
+    <input type='button' class='btn btn-primary' value='Päivitä' ng-click='update()'/>
+    <input type='button' class='btn btn-primary' value='Poista' ng-click='delete()'/>
+    <a href="#/stableCalendar" class="btn btn-primary">Palaa</a>
+</div>
